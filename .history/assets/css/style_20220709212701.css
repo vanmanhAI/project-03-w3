@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --lineheight-nav: 2.25rem;
+    --padding-nav: 1.2rem;
+}
+#main {
+
+}
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: var(--lineheight-nav);
+}
+#header:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#header .header-search {
+    color: #fff;
+    display: block;
+    float: right;
+    padding: var(--padding-nav) 2.4rem;
+    line-height: var(--lineheight-nav);
+    cursor: pointer;
+}
+#header .header-search:hover {
+    background: #f44336
+}
+#header #nav>li {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+    padding: var(--padding-nav) 2.4rem;
+}
+#header #nav>li:last-child:hover .subnav {
+    width: 16rem;
+}
+#header #nav li:hover {
+    background: #ccc;
+}
+#header #nav>li:hover>a {
+    color: #000;
+}
+#nav li {
+    list-style-type: none;
+    position: relative;
+}
+#nav li .subnav-caret {
+    text-transform: none;
+    text-align: center;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#nav .subnav {
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 10px 0 #ccc;
+    transition: width 0.3s linear;
+}
+#nav .subnav li {
+    padding: 0.8rem 1.6rem;
+    text-align: left;
+    min-width: 16rem;
+}
+#nav .subnav li a {
+    color: #000;
+    text-transform: capitalize;
+}
+#slider {
+    margin-top: calc(var(--lineheight-nav) + var(-padding));
+}
+#content {
+
+}
+#footer {
+
+}

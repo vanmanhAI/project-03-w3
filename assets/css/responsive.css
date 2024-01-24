@@ -1,0 +1,100 @@
+/* Mobile */
+@media (max-width: 46.1875em) {
+    /* common */
+    .s-width-full,
+    .s-col-full {
+        width: 100% !important;
+    }
+    .s-mt-8 {
+        margin-top: 8px;
+    }
+    /* main */
+    #header .nav:first-of-type>li:not(:first-of-type) {
+        display: none;
+    }
+    #header .nav.navDemo {
+        position: absolute;
+        z-index: -1;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #000;
+        box-shadow: 0 0 10px 0 #000;
+        display: none;
+    }
+    #header .header-input:checked + .nav.navDemo{
+        animation: switchnavDemo .5s ease;
+        display: block;
+    }
+    #header .nav.navDemo > li {
+        float: unset;
+        text-align: left;
+    }
+    #header .header-magnifying-glass {
+        display: none;
+    }
+    #header .header-bar:hover {
+        background: #ccc;
+        color: #000;
+    }
+    @keyframes switchnavDemo{
+        from {
+            transform: translateY(-125%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    .contact-form .row {
+        padding-left: 8px;
+    }
+    .contact-content .contact-info {
+        margin-bottom: 3.2rem
+    }
+    #footer i[class^="fa-brands"] {
+        font-size: 3rem;
+        margin: 0 0.8rem;
+    }
+    .modal .modal-container {
+        width: 100%;
+    }
+}
+/* Tablet */ 
+@media (min-width: 46.25em) and (max-width: 63.99875em)  {
+    #footer i[class^="fa-brands"] {
+        font-size: 4.8rem;
+        margin: 0 0.8rem;
+    }
+    .modal .modal-container {
+        width: 600px;
+    }
+}
+/* Mobile and Tablet */
+@media (max-width: 63.99875em) {
+    .nav .subnav li a{
+        padding: 1rem 1.6rem;
+    }
+    .btn {
+        padding: 1rem 1.6rem;
+    }
+    .contact-content .contact-info {
+        line-height: 2;
+    }
+    .contact-content .contact-form .form-control {
+        padding: 1rem;
+    }
+    #footer .copyright>a {
+        display: inline-block;
+        padding: 12px 0px;
+    }
+}
+
+/* > Mobile */
+@media (min-width: 46.25em) {
+    #header .nav.navDemo,
+    #header .header-bar {
+        display: none;
+    }
+}

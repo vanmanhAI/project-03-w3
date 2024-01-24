@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+:root {
+    --lineheight-nav: 2.25rem;
+    --padding-nav: 1.2rem;
+}
+.text-white {
+    color: #fff;
+}
+#main {
+
+}
+#header {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    line-height: var(--lineheight-nav);
+}
+#header:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#header .header-search {
+    color: #fff;
+    display: block;
+    float: right;
+    padding: var(--padding-nav) 2.4rem;
+    line-height: var(--lineheight-nav);
+    cursor: pointer;
+}
+#header .header-search:hover {
+    background: #f44336
+}
+#header #nav>li {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    float: left;
+}
+#header #nav>li>a {
+    display: block;
+    padding: var(--padding-nav) 2.4rem;
+}
+#header #nav>li:last-child:hover .subnav {
+    width: 16rem;
+}
+#header #nav li:hover {
+    background: #ccc;
+}
+#header #nav>li:hover>a {
+    color: #000;
+}
+#nav li {
+    list-style-type: none;
+    position: relative;
+}
+#nav li .subnav-caret {
+    text-transform: none;
+    text-align: center;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#nav .subnav {
+    position: absolute;
+    width: 0;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    color: #000;
+    box-shadow: 0 0 4px 0 #ccc;
+    transition: width 0.3s linear;
+}
+#nav .subnav li {
+    padding: 0.8rem 1.6rem;
+    text-align: left;
+    min-width: 16rem;
+}
+#nav .subnav li a {
+    color: #000;
+    text-transform: capitalize;
+}
+#slider {
+    position: relative;
+    margin-top: calc(var(--lineheight-nav) + 2*var(--padding-nav));
+    background: #ccc;
+    padding-top: 50%;
+    max-height: 100vh;
+    background: url('/assets/img/sliders/chicago.jpg') top/cover no-repeat
+}
+.slider-desc{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translatex(-50%);
+    color: #fff;
+    padding: 3.2rem 1.6rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+
+}
+.slider-name{
+    text-transform: capitalize;
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    margin: 1rem 0;
+}
+.slider-content{
+    line-height: 1.5;
+    font-size: 1.5rem;
+}
+#content {
+    line-height: 1.5;
+}
+#content .content-section {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 6.4rem 1.6rem;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}
+#content .section-heading {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 4.5rem;
+    margin: 1rem 0;
+    text-align: center;
+    letter-spacing: 0.4rem;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+}
+#content .section-sub-heading {
+    text-align: center;
+    font-style: italic;
+    font-weight: 100;
+    margin: 1.5rem 0;
+}
+#content .content-section .about {
+    text-align: justify;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    word-spacing: 0.1rem;
+}
+#content .members-list {
+    padding: 3.2rem 0;
+    text-align: center;
+}
+#content .members-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#content .member-item{
+    float: left;
+    width: calc(100%/3);
+}
+#content .members-list .member-name {
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+#content .members-list .member-img{
+    width: 60%;
+    border-radius: 0.4rem;
+    margin: 0 0 1.6rem;
+}
+#content .tour-section {
+    background: #000;
+}
+#content .tour-section .tickets-list {
+    background: #fff;
+    list-style-type: none;
+}
+#content .tickets-list li {
+    padding: 0.8rem 1.6rem;
+}
+#content .tickets-list .sold-out {
+    display: inline-block;
+    padding: 0 0.8rem;
+    color: #fff;
+    background: #f44336;
+    margin-left: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+}
+#content .tickets-list .quantity {
+    display: block;
+    padding: 0 0.8rem;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    float: right;
+    margin-right: 1.6rem;
+}
+#content .places-list {
+    padding: 3.2rem 0.8rem;
+    margin: 0 -1.6rem;
+}
+#content .places-list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#content .places-list .place-item {
+    width: calc(100%/3);
+    float: left;
+    padding: 0 0.8rem 1.6rem;
+}
+#content .places-list .place-img {
+    width: 100%;
+    vertical-align: middle;
+}
+#content .places-list .place-img:hover {
+    opacity: 0.6;
+}
+#content .places-list .place-body{
+    background: #fff;
+    padding: 0.015rem 1.6rem;
+}
+#content .places-list .place-heading{
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+#content .places-list .place-time{
+    margin: 1.5rem 0;
+}
+#content .places-list .place-desc{
+    margin: 1.5rem 0;
+    font-weight: bold;
+}
+#content .places-list .place-buy-btn{
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    margin-bottom: 1.6rem;
+    font-weight: bold;
+}
+#content .places-list .place-buy-btn:hover {
+    background: #ccc;
+    color: #000;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 1.5rem;
+    font-family: "Segoe UI",Arial,sans-serif;
+    line-height: 2.25rem;
+    padding: 100px 16px;
+}
+.modal.open {
+    
+}
+.modal .modal-container {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    max-width: 900px;
+    margin: auto;
+}
+.modal .modal-container .modal-header {
+    position: relative;
+    color: #fff;
+    background: #009688;
+    text-align: center;
+    padding: 3.2rem 1.6rem;
+}
+.modal .modal-header .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 3.6rem;
+    padding: 0.8rem 1.6rem;
+    font-size: 1.5rem;
+
+}
+.modal .modal-header .modal-close:hover {
+    background: #ccc;
+    color: #000;
+}
+.modal .modal-header .modal-heading {
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 4.5rem;
+    margin: 1rem 0;
+    letter-spacing: 0.4rem;
+}
+.modal .modal-header .modal-bag{
+    font-size: 2.7rem;
+}
+.modal .modal-container .modal-body {
+    padding: 0.015rem 1.6rem;
+    background: #fff;
+}
+.modal-container .modal-body:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.modal .modal-body .modal-label {
+    display: block;
+    margin: 1.5rem 0;
+}
+.modal .modal-body .modal-input {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+.modal .modal-container .modal-btn-pay {
+    display: block;
+    width: 100%;
+    border: none;
+    margin: 1.6rem 0;
+    padding: 1.6rem;
+    background: #009688;
+    color: #fff;
+    text-align: center;
+}
+.modal .modal-container .modal-btn-pay:hover {
+    background: #ccc;
+    color: #000;
+}
+.modal .modal-container .modal-btn-close {
+    border: none;
+    margin: 1.6rem 0;
+    padding: 0.8rem 1.6rem;
+    float: left;
+    background: #f44336;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+}
+.modal-container .modal-btn-close:hover {
+    background: #ccc;
+    color: #000;
+}
+.modal .modal-container .modal-assit {
+    float: right;
+    margin: 1.5rem 0;
+}
+.modal-container .modal-assit .modal-help {
+    color: #2196f3;
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+.footer {
+
+}

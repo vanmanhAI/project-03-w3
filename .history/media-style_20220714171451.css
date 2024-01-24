@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: orange;
+    display: flex;
+    
+}
+h2 {
+    font-size: 100px;
+    margin: auto;
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+#main {
+
+}
+#header {
+    background: #000;
+}
+#header #nav>li {
+    padding: 12px 24px;
+}
+#nav li {
+    display: inline-block;
+}
+#nav li .subnav-caret {
+    text-transform: none;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#nav li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#nav .subnav {
+    display: none;
+}
+#slider {
+
+}
+#content {
+
+}
+#footer {
+
+}
